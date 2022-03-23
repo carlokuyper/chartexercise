@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header';
+import ChartOne from './components/ChartOne';
+import ChartTwo from './components/ChartTwo';
+import ChartThree from './components/ChartThree';
+import ChartFour from './components/ChartFour';
+import ChartFive from './components/ChartFive'
+
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Header />
+     <Routes>
+       <Route path="/" element={<ChartOne />}/>
+       <Route path="/ChartTwo" element={<ChartTwo/>}/>
+       <Route path="/ChartThree" element={<ChartThree/>}/>
+       <Route path="/ChartFour" element={<ChartFour/>}/>
+       <Route path="/ChartFive" element={<ChartFive/>}/>
+     </Routes>
     </div>
   );
 }
